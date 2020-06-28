@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Image Gallery</title>
-</head>
-
-<body>
-    <div class="container-main">
-        <button id="btn-left"></button>
-        <img src="images/img1.jpg" id="current" alt="main image">
-        <button id="btn-right"></button>
-    </div>
-
-    <div class="imgs">
-        <img class="active" src="images/img1.jpg">
-        <img src="images/img2.jpg">
-        <img src="images/img3.jpg">
-        <img src="images/img4.jpg">
-        <img src="images/img5.jpg">
-        <img src="images/img6.jpg">
-    </div>
-
-    <div class="nav">
-        <button class="nav-btn active"></button>
-        <button class="nav-btn"></button>
-        <button class="nav-btn"></button>
-        <button class="nav-btn"></button>
-        <button class="nav-btn"></button>
-        <button class="nav-btn"></button>
-    </div>
-</body>
-<script src="app.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Accordion</title>
+    </head>
+    <body>
+        <header class="header">
+            <span>Section 1</span>
+            <button id="expand0" class="expand">+</button>
+            <button id="coll0" style="display: none" class="expand">-</button>
+        </header>
+        <section class="accor-sect">
+            Section1 - This is for testing purposes. This is for testing purposes. This is for testing purposes.
+        </section>
+        <header class="header">
+            <span>Section 2</span>
+            <button id="expand1" class="expand">+</button>
+            <button id="coll1" style="display: none" class="expand">-</button>
+        </header>
+        <section class="accor-sect">
+            Section2 - This is for testing purposes. This is for testing purposes. This is for testing purposes.
+        </section>
+        <header class="header">
+            <span>Section 3</span>
+            <button id="expand2" class="expand">+</button>
+            <button id="coll2" style="display: none" class="expand">-</button>
+        </header>
+        <section class="accor-sect">
+            Section3 - This is for testing purposes. This is for testing purposes. This is for testing purposes.
+        </section>
+    </body>
+    <script src="app.js"></script>
 </html>
