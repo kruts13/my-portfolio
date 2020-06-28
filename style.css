@@ -1,83 +1,44 @@
-body {
-    background-color: darksalmon;
-}
-
-.carousel {
-    position: relative;
-    height: 600px;
-    width: 80%;
-    margin: auto;
-}
-
-.carousel-images {
-    height: 100%;
+.container {
     width: 100%;
+    margin: 0 auto;
 }
 
-.carousel-container {
-    background: teal;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-.carousel-track {
+.nav {
     list-style: none;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    height: 100%;
-    transition: transform 250ms ease-in;
+    display: inline-flex;
 }
 
-.carousel-slide {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
+.nav .active {
+    color: purple;
+    border-bottom: 1px solid purple;
 }
 
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    border: 0;
+li {
+    margin-left: 10px;
+    color: grey;
+    border-bottom: 1px solid transparent;
     cursor: pointer;
 }
 
-.carousel-button img {
-    width: 12px;
+li:hover {
+    color: purple;
 }
 
-.carousel-button-left {
-    left: -10%;
-}
-
-.carousel-button-right {
-    right: -10%;
-}
-
-.carousel-nav {
-    background-color: khaki;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-}
-
-.carousel-indicator {
-    border: 0;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    background:grey;
-    margin: 0 12px;
-}
-
-.carousel-indicator.current-slide {
-    background: black;
-}
-
-.is-hidden {
+.tab-pane {
     display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+@media(min-width: 500px) {
+    body {
+        background-color: aquamarine;
+    }
+}
+
+@media(max-width: 499px) {
+    body {
+        background-color: saddlebrown;
+    }
 }

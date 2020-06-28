@@ -4,37 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <title>Carousel</title>
+    <title>Create Tabs</title>
 </head>
 <body>
-    <div class="carousel">
-        <button class="carousel-button carousel-button-left is-hidden">
-            <img src="images/left.svg">
-        </button>
+    <div class="container">
+        <ul id="nav-tab" class="nav">
+            <li class="active">Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
 
-        <div class="carousel-container">
-            <ul class="carousel-track">
-                <li class="carousel-slide current-slide">
-                    <img class="carousel-images" src="images/angular.png" alt="">
-                </li>
-                <li class="carousel-slide">
-                    <img class="carousel-images" src="images/html5.png" alt="">
-                </li>
-                <li class="carousel-slide">
-                    <img class="carousel-images" src="images/css3.png" alt="">
-                </li>
-            </ul>
-        </div>
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab0">
+                <h4>Home Tab</h4>
+                <p>Random content</p>
+            </div>
 
-        <button class="carousel-button carousel-button-right">
-            <img src="images/right.svg">
-        </button>
+            <div class="tab-pane" id="tab1">
+                <h4>About Tab</h4>
+                <p>Random content</p>
+            </div>
 
-        <div class="carousel-nav">
-            <button class="carousel-indicator current-slide"></button>
-            <button class="carousel-indicator"></button>
-            <button class="carousel-indicator"></button>
+            <div class="tab-pane" id="tab2">
+                <h4>Contact Tab</h4>
+                <p>Random content</p>
+            </div>
         </div>
     </div>
 </body>
