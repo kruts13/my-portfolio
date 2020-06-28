@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Face Tracking using Javascript</title>
 </head>
 <body>
-    <h1>Star Rating</h1>
-    <button class="star-button" onmouseout="greyAll(this)" onmouseover="callHover(event)"></button>
-    <button class="star-button" onmouseout="greyAll(this)" onmouseover="callHover(event)"></button>
-    <button class="star-button" onmouseout="greyAll(this)" onmouseover="callHover(event)"></button>
-    <button class="star-button" onmouseout="greyAll(this)" onmouseover="callHover(event)"></button>
-    <button class="star-button" onmouseout="greyAll(this)" onmouseover="callHover(event)"></button>
+    <video id="video" width="720" height="560" autoplay></video>
+    <div id="yellow"></div>
+    <div id="blue"></div>
+    <div id="green" data-sound="angry"></div>
+    <div id="red"></div>
 </body>
+<script src="howler.min.js"></script>
+<script src="face-api.min.js"></script>
 <script src="app.js"></script>
 </html>
