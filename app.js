@@ -2,10 +2,10 @@
 const getVideo = document.getElementById('video');
 
 Promise.all([
-    faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
-    faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
-    faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
-    faceapi.nets.faceExpressionNet.loadFromUri('/models')
+    faceapi.nets.tinyFaceDetector.loadFromUri('../models'),
+    faceapi.nets.faceLandmark68Net.loadFromUri('../models'),
+    faceapi.nets.faceRecognitionNet.loadFromUri('../models'),
+    faceapi.nets.faceExpressionNet.loadFromUri('../models')
 ]).then(startVideo)
 
 function startVideo() {
@@ -29,11 +29,8 @@ getVideo.addEventListener('play', () => {
         const detections = await faceapi.detectSingleFace(getVideo,
             new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceDescriptor().withFaceExpressions();
         const resizedDetections = faceapi.resizeResults(detections, displaySize);
-        // console.log(resizedDetections);
-        // console.log(detections);
         canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
         faceapi.draw.drawDetections(canvas, resizedDetections);
-        // faceapi.draw.drawFaceLandmarks(canvas, resizedDetections);
         new faceapi.draw.DrawFaceLandmarks(resizedDetections.landmarks, {
             drawLines: true, lineColor: 'yellow', lineWidth: 4,
             drawPoints: false, pointColor: 'yellow'
@@ -54,14 +51,10 @@ getVideo.addEventListener('play', () => {
         // console.log(nose);
         var ctx = canvas.getContext("2d");
         let a = document.getElementById('green');
-        // console.log(a.offsetLeft);
-        // console.log(a.offsetTop);
 
         for (let i = 0; i < nose.length; i++) {
             let x = nose[i].x;
             let y = nose[i].y;
-            console.log(x);
-            console.log(y);
             if (nose[i].x > 60 && nose[i].x < 160 && nose[i].y > 70 && nose[i].y < 200) {
                 console.log('yellow');
                 sounds.play('sound1');
@@ -71,19 +64,18 @@ getVideo.addEventListener('play', () => {
                 sounds.play('sound2');
             }
             if (nose[i].x > 60 && nose[i].x < 150 && nose[i].y > 300 && nose[i].y < 410) {
-                 console.log('green');
+                console.log('green');
                 sounds.play('sound3');
             }
             if (nose[i].x > 470 && nose[i].x < 530 && nose[i].y > 310 && nose[i].y < 410) {
                 console.log('red');
-               sounds.play('sound4');
-           }
+                sounds.play('sound4');
+            }
         }
 
         // faceapi.draw.drawFaceDescriptor(canvas, resizedDetections);
         faceapi.draw.drawFaceExpressions(canvas, resizedDetections);
 
-        // console.log(detections);
         if (detections.expressions.happy > 0.7) {
             console.log('happy');
             sounds.play('happy');
@@ -100,65 +92,63 @@ getVideo.addEventListener('play', () => {
             console.log('sad');
             sounds.play('sad');
         }
-        // console.log(resizedDetections);
-        // console.log(detections);
     }, 100)
 });
 
 
 let audioInfo = {
     "resources": [
-      "sounds.webm",
-      "sounds.mp3"
+        "sounds.webm",
+        "sounds.mp3"
     ],
     "spritemap": {
-      "angry": {
-        "start": 0,
-        "end": 0.9623356009070295,
-        "loop": false
-      },
-      "sad": {
-        "start": 2,
-        "end": 3.4571655328798183,
-        "loop": false
-      },
-      "happy": {
-        "start": 5,
-        "end": 6.3750113378684805,
-        "loop": false
-      },
-      "neutral": {
-        "start": 8,
-        "end": 8.821950113378685,
-        "loop": false
-      },
-      "sound1": {
-        "start": 10,
-        "end": 10.536303854875284,
-        "loop": false
-      },
-      "sound2": {
-        "start": 12,
-        "end": 12.78047619047619,
-        "loop": false
-      },
-      "sound3": {
-        "start": 14,
-        "end": 14.675034013605442,
-        "loop": false
-      },
-      "sound4": {
-        "start": 16,
-        "end": 16.605804988662133,
-        "loop": false
-      },
-      "surprised": {
-        "start": 18,
-        "end": 18.987142857142857,
-        "loop": false
-      }
+        "angry": {
+            "start": 0,
+            "end": 0.9623356009070295,
+            "loop": false
+        },
+        "sad": {
+            "start": 2,
+            "end": 3.4571655328798183,
+            "loop": false
+        },
+        "happy": {
+            "start": 5,
+            "end": 6.3750113378684805,
+            "loop": false
+        },
+        "neutral": {
+            "start": 8,
+            "end": 8.821950113378685,
+            "loop": false
+        },
+        "sound1": {
+            "start": 10,
+            "end": 10.536303854875284,
+            "loop": false
+        },
+        "sound2": {
+            "start": 12,
+            "end": 12.78047619047619,
+            "loop": false
+        },
+        "sound3": {
+            "start": 14,
+            "end": 14.675034013605442,
+            "loop": false
+        },
+        "sound4": {
+            "start": 16,
+            "end": 16.605804988662133,
+            "loop": false
+        },
+        "surprised": {
+            "start": 18,
+            "end": 18.987142857142857,
+            "loop": false
+        }
     }
-  }
+}
 
 const spriteMap = {};
 for (const sprite in audioInfo.spritemap) {
@@ -168,7 +158,6 @@ for (const sprite in audioInfo.spritemap) {
         audioInfo.spritemap[sprite].loop
     ];
 }
-
 
 const sounds = new Howl(
     {
@@ -185,7 +174,6 @@ const sounds = new Howl(
 // sounds.play('angry');
 
 const greenDiv = document.querySelector('#green');
-console.log(greenDiv);
 greenDiv.addEventListener('click', () => {
     console.log(event.target.dataset.sound);
     let soundToPlay = event.target.dataset.sound;
