@@ -48,29 +48,20 @@ getVideo.addEventListener('play', () => {
         const leftEyeBbrow = detections.landmarks.getLeftEyeBrow();
         const rightEyeBrow = detections.landmarks.getRightEyeBrow();
         const nose = detections.landmarks.getNose();
-        // console.log(nose);
-        var ctx = canvas.getContext("2d");
-        let a = document.getElementById('green');
 
         for (let i = 0; i < nose.length; i++) {
             let x = nose[i].x;
             let y = nose[i].y;
-            console.log(x);
-            console.log(y);
             if (nose[i].x > 60 && nose[i].x < 160 && nose[i].y > 70 && nose[i].y < 200) {
-                console.log('yellow');
                 sounds.play('sound1');
             }
             if (nose[i].x > 450 && nose[i].x < 580 && nose[i].y > 50 && nose[i].y < 130) {
-                console.log('blue');
                 sounds.play('sound2');
             }
             if (nose[i].x > 60 && nose[i].x < 180 && nose[i].y > 240 && nose[i].y < 410) {
-                console.log('green');
                 sounds.play('sound3');
             }
             if (nose[i].x > 430 && nose[i].x < 530 && nose[i].y > 250 && nose[i].y < 410) {
-                console.log('red');
                 sounds.play('sound4');
             }
         }
@@ -79,19 +70,14 @@ getVideo.addEventListener('play', () => {
         faceapi.draw.drawFaceExpressions(canvas, resizedDetections);
 
         if (detections.expressions.happy > 0.7) {
-            console.log('happy');
             sounds.play('happy');
         } else if (detections.expressions.neutral > 0.7) {
-            console.log('neutral');
             sounds.play('neutral');
         } else if (detections.expressions.angry > 0.7) {
-            console.log('angry');
             sounds.play('angry');
         } else if (detections.expressions.surprised > 0.7) {
-            console.log('surprised');
             sounds.play('surprised');
         } else if (detections.expressions.sad > 0.7) {
-            console.log('sad');
             sounds.play('sad');
         }
     }, 100)
@@ -172,12 +158,3 @@ const sounds = new Howl(
         volume: 1.0
     }
 );
-
-// sounds.play('angry');
-
-const greenDiv = document.querySelector('#green');
-greenDiv.addEventListener('click', () => {
-    console.log(event.target.dataset.sound);
-    let soundToPlay = event.target.dataset.sound;
-    sounds.play(soundToPlay);
-});
