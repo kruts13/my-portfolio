@@ -1,0 +1,217 @@
+/* Featured Work Page */
+
+.work-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Nested flex inside work-container */
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* Three sections inside work-container */
+
+.header-logo, .project-section, .publication-section {
+  width: 100%;
+}
+
+@media screen and (min-width: 550px) and (max-width: 900px) {
+  .project1 {
+    width: 33.33%;
+    order: 0;
+  }
+  .project2 {
+    width: 33.33%;
+    order: 1;
+  }
+  .project3 {
+    width: 33.33%;
+    order: 2;
+  }
+  .project4 {
+    width: 33.33%;
+    order: 3;
+  }
+  .project5 {
+    width: 33.33%;
+    order: 4;
+  }
+  .project6 {
+    width: 33.33%;
+    order: 5;
+  }
+  .project7 {
+    width: 33.33%;
+    order: 6;
+  }
+  .project8 {
+    width: 33.33%;
+    order: 7;
+  }
+  .project9 {
+    width: 33.33%;
+    order: 8;
+  }
+  .project10 {
+    width: 33.33%;
+    order: 9;
+  }
+  .project11 {
+    width: 33.33%;
+    order: 10;
+  }
+}
+
+@media screen and (min-width: 901px) {
+  .project1 {
+    width: 20%;
+    order: 0;
+  }
+  .project2 {
+    width: 20%;
+    order: 1;
+  }
+  .project3 {
+    width: 20%;
+    order: 2;
+  }
+  .project4 {
+    width: 20%;
+    order: 3;
+  }
+  .project5 {
+    width: 20%;
+    order: 4;
+  }
+  .project6 {
+    width: 20%;
+    order: 5;
+  }
+  .project7 {
+    width: 20%;
+    order: 6;
+  }
+  .project8 {
+    width: 20%;
+    order: 7;
+  }
+  .project9 {
+    width: 20%;
+    order: 8;
+  }
+  .project10 {
+    width: 20%;
+    order: 9;
+  }
+  .project11 {
+    width: 33.33%;
+    order: 10;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav {
+    width: 100px;
+  }
+}
+
+/* About Me Page */
+
+.aboutme-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skillbox {
+  width: 100%;
+}
+
+@media screen and (min-width: 0px) {
+  .skill1 {
+    width: 30%;
+    order: 0;
+  }
+  .skill2 {
+    width: 30%;
+    order: 1;
+  }
+  .skill3 {
+    width: 30%;
+    order: 2;
+  }
+  .skill4 {
+    width: 30%;
+    order: 3;
+  }
+  .skill5 {
+    width: 30%;
+    order: 4;
+  }
+  .skill6 {
+    width: 30%;
+    order: 5;
+  }
+  .skill7 {
+    width: 30%;
+    order: 6;
+  }
+  .skill8 {
+    width: 30%;
+    order: 7;
+  }
+  .skill9 {
+    width: 30%;
+    order: 8;
+  }
+  .skill10 {
+    width: 30%;
+    order: 9;
+  }
+  .skill11 {
+    width: 30%;
+    order: 10;
+  }
+  .skill12 {
+    width: 30%;
+    order: 11;
+  }
+  .skill13 {
+    width: 30%;
+    order: 12;
+  }
+  .skill14 {
+    width: 30%;
+    order: 11;
+  }
+  .skill15 {
+    width: 30%;
+    order: 12;
+  }
+  .skill16 {
+    width: 30%;
+    order: 11;
+  }
+  .skill17 {
+    width: 30%;
+    order: 12;
+  }
+  .skill18 {
+    width: 30%;
+    order: 11;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 450px) {
+  .mypicture {
+    width: 300px;
+  }
+}

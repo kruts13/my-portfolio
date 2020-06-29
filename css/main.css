@@ -1,0 +1,186 @@
+body {
+  background-color: #efe6e6;
+  text-align: center;
+  font-family: 'Montserrat', 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Index Page */
+
+#welcome, #aboutme, #contactme, #work {
+  width: 50%;
+  height: 50%;
+  float: left;
+  font-size: 30px;
+  vertical-align: middle;
+  line-height: 1.5em;
+}
+
+#welcome {
+  background: #fcc;
+  color: #300;
+  font-size: 22px;
+}
+
+#aboutme {
+  background: #ff9999;
+  color: #300;
+}
+
+#contactme {
+  background: #660000;
+  color: #fcc;
+}
+
+#work {
+  background: #300;
+  color: #fcc;
+}
+
+.index-images {
+  height: 50px;
+  width: 60px;
+}
+
+/* Featured Work Page */
+
+.nav {
+  z-index: 10;
+  background-color: #657082;
+  width: 200px;
+  position: absolute;
+  /* This transform moves the drawer off canvas. */
+  -webkit-transform: translate(-200px, 0);
+  transform: translate(-200px, 0);
+  /* Optionally, we animate the drawer. */
+  transition: transform 0.3s ease;
+}
+
+.nav.open {
+  /* This trasform moves the drawer back to the canvas. */
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.nav-list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
+
+.nav-item {
+  display: inline-block;
+  border-bottom: 1px solid #E0E0E0;
+  width: 100%;
+  line-height: 15px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.header-menu {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  padding: 1em;
+}
+
+.header-menu svg {
+  width: 35px;
+  fill: #E0E0E0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a.button {
+  background-color: #4d6791;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+/*Header logo and image */
+
+#udacity-logo {
+  height: 50px;
+  width: 50px;
+  float: left;
+}
+
+#header {
+  text-align: right;
+  padding: 1em;
+  font-family: 'Aldrich';
+}
+
+.horizontal-line {
+  border: 2px solid;
+  border-color: #300;
+}
+
+#headerimage {
+  height: 350px;
+  width: 100%;
+  border: 2px solid #717477;
+}
+
+/* section */
+
+.sectionheadings {
+  color: #627384;
+}
+
+.projectimages {
+  width: 93%;
+  height: 80%;
+  border: 3px solid #fff;
+}
+
+.publication-section, .certification-section {
+  margin: 10px 3px 0px 5px;
+  text-align: left;
+}
+
+li {
+  text-align: left;
+}
+
+#horizontal-line-pub {
+  border-color: #300;
+}
+
+/* About Me Page */
+
+.aboutme-header, .skillheading {
+  text-align: center;
+}
+
+.mypicture {
+  height: 200px;
+  width: 400px;
+  border: 3px solid #000;
+  border-radius: 150px;
+}
+
+.about-me-body {
+  overflow-x: hidden;
+}
+
+/* Contact Me Page */
+
+.contactme-header {
+  text-align: center;
+}
