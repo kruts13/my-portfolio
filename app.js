@@ -55,6 +55,8 @@ getVideo.addEventListener('play', () => {
         for (let i = 0; i < nose.length; i++) {
             let x = nose[i].x;
             let y = nose[i].y;
+            console.log(x);
+            console.log(y);
             if (nose[i].x > 60 && nose[i].x < 160 && nose[i].y > 70 && nose[i].y < 200) {
                 console.log('yellow');
                 sounds.play('sound1');
@@ -63,11 +65,11 @@ getVideo.addEventListener('play', () => {
                 console.log('blue');
                 sounds.play('sound2');
             }
-            if (nose[i].x > 60 && nose[i].x < 150 && nose[i].y > 300 && nose[i].y < 410) {
+            if (nose[i].x > 60 && nose[i].x < 180 && nose[i].y > 240 && nose[i].y < 410) {
                 console.log('green');
                 sounds.play('sound3');
             }
-            if (nose[i].x > 470 && nose[i].x < 530 && nose[i].y > 310 && nose[i].y < 410) {
+            if (nose[i].x > 430 && nose[i].x < 530 && nose[i].y > 250 && nose[i].y < 410) {
                 console.log('red');
                 sounds.play('sound4');
             }
